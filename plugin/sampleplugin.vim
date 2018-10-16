@@ -8,10 +8,11 @@ python << EOF
 import vim 
 
 vim.command("let a:plugin_path = expand('<sfile>:p:h')")
+vim.command("let a:p = $VIMRUNTIME")
 plugin_path = vim.eval("a:plugin_path")
 
 import weakref
-print(g:p)
+print(a:p)
 
 EOF
 endfunction
